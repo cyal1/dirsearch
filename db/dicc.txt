@@ -4057,6 +4057,7 @@ Connections
 connections
 connections.%EXT%
 console
+console/login/LoginForm.jsp
 console/
 console/base/config.json
 console/j_security_check
