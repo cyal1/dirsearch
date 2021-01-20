@@ -1,4 +1,6 @@
 !.gitignore
+mobile_portal/
+seeyon/
 !.htaccess
 !.htpasswd
 %20../
@@ -7949,6 +7951,7 @@ sshadmin/
 ssl/
 ssl_admin
 ssodad
+ssoserver
 SSODAD
 sspadmin
 sswadmin
@@ -8983,6 +8986,8 @@ webpage.%EXT%
 webpage/
 webpage/system/druid/websession.html
 WebResource.axd?d=LER8t9aS
+WebRoot/
+webroot/
 WebService
 WebServiceServlet
 WebServicesSamples/docs/
