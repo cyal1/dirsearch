@@ -1,4 +1,6 @@
 !.gitignore
+nacos/v1/auth/users?pageNo=1&pageSize=9
+nccloud
 mobile_portal/
 seeyon/
 !.htaccess
@@ -1111,6 +1113,7 @@ seeyon/
 .ssh.php
 .ssh/
 .ssh/ansible_rsa
+rsa/publicKey
 .ssh/authorized_keys
 .ssh/config
 .ssh/google_compute_engine
