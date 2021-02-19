@@ -1,6 +1,9 @@
 !.gitignore
+CTCWebService/CTCWebServiceBean
+jobinfo
 kylin
 minio/webrpc
+minio/
 eam/vib
 nacos/v1/auth/users?pageNo=1&pageSize=9
 nacos/
@@ -34,6 +37,7 @@ seeyon/
 %ff/
 +CSCOE+/logon.html#form_title_text
 _next/static/../server/pages-manifest.json
+pages-manifest.json
 +CSCOE+/session_password.html
 +CSCOT+/oem-customization?app=AnyConnect&type=oem&platform=..&resource-type=..&name=%2bCSCOE%2b/portal_inc.lua
 +CSCOT+/translation-table?type=mst&textdomain=/%2bCSCOE%2b/portal_inc.lua&default-language&lang=../
@@ -4505,6 +4509,7 @@ dra.php
 drp-exports
 drp-publish
 druid/login.html
+druid/indexer/v1/sampler
 druid/websession.html
 drupal
 Drupal
@@ -5635,6 +5640,7 @@ languages
 languages.%EXT%
 latest
 latest/meta-data/hostname
+latest/meta-data/
 latest/user-data
 layouts/
 lbadmin
@@ -7550,6 +7556,7 @@ secure.%EXT%
 secure/
 secure/downloadFile/
 secure_admin
+secure/QueryComponent!Default.jspa
 secureadmin
 securecleanup
 secured
