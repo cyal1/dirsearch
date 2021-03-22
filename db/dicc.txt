@@ -1,23 +1,20 @@
 !.gitignore
-CTCWebService/CTCWebServiceBean
-jobinfo
-kylin
-minio/webrpc
-minio/
-eam/vib
-nacos/v1/auth/users?pageNo=1&pageSize=9
-nacos/
-nccloud
-mobile_portal/
-seeyon/
+oauth2/v1/keys
+jwks.json
+.well-known/jwks.json
+.well-known/jwks_uri
+.well-known/openid-configuration/jwks
+openid/connect/jwks.json
+mweb/
+cgi-bin/test-cgi?/*
+cgi-bin/test-cgi?*
+cgi-bin/printenv
 !.htaccess
 !.htpasswd
-..%2f
-.%2f
-%3f
 %20../
 %2e%2e//google.com
 %2e%2e;/test
+%3f
 %3f/
 %C0%AE%C0%AE%C0%AF
 %EXT%
@@ -36,11 +33,11 @@ seeyon/
 %ff
 %ff/
 +CSCOE+/logon.html#form_title_text
-_next/static/../server/pages-manifest.json
-pages-manifest.json
 +CSCOE+/session_password.html
 +CSCOT+/oem-customization?app=AnyConnect&type=oem&platform=..&resource-type=..&name=%2bCSCOE%2b/portal_inc.lua
 +CSCOT+/translation-table?type=mst&textdomain=/%2bCSCOE%2b/portal_inc.lua&default-language&lang=../
+.%2f
+..%2f
 ..;/
 .0
 .7z
@@ -1043,8 +1040,6 @@ pages-manifest.json
 .rspec
 .rspec_parallel
 .rsync-filter
-filter
-kylin/api/admin/config
 .rsync_cache
 .rsync_cache/
 .rts2_cache_cjs/
@@ -1127,7 +1122,6 @@ kylin/api/admin/config
 .ssh.php
 .ssh/
 .ssh/ansible_rsa
-rsa/publicKey
 .ssh/authorized_keys
 .ssh/config
 .ssh/google_compute_engine
@@ -1740,6 +1734,7 @@ _mmServerScripts/MMHTTPDB.php
 _myadmin
 _myadmin.%EXT%
 _news_admin_
+_next/static/../server/pages-manifest.json
 _notes
 _notes/
 _notes/dwsync.xml
@@ -1954,10 +1949,15 @@ activemq/
 activity.log
 activitysessions/docs/
 actuator
+actuator/archaius
 actuator/auditevents
 actuator/auditLog
 actuator/beans
+actuator/bindings
+actuator/bus-env
+actuator/bus-refresh
 actuator/caches
+actuator/channels
 actuator/conditions
 actuator/configprops
 actuator/configurationMetadata
@@ -1968,6 +1968,7 @@ actuator/exportRegisteredServices
 actuator/features
 actuator/flyway
 actuator/health
+actuator/health/**
 actuator/healthcheck
 actuator/heapdump
 actuator/httptrace
@@ -1981,12 +1982,14 @@ actuator/loggers
 actuator/loggingConfig
 actuator/mappings
 actuator/metrics
+actuator/nacos-discovery
 actuator/prometheus
 actuator/refresh
 actuator/registeredServices
 actuator/releaseAttributes
 actuator/resolveAttributes
 actuator/scheduledtasks
+actuator/service-registry
 actuator/sessions
 actuator/springWebflow
 actuator/sso
@@ -3819,6 +3822,8 @@ clients.tar.gz
 clients.zip
 clientsadmin
 clocktower
+__clockwork/
+surya/__clockwork/
 cloud
 cloud-config.txt
 cloud/
@@ -4188,6 +4193,7 @@ css.php
 csv
 CSV
 csx/
+CTCWebService/CTCWebServiceBean
 CTestTestfile.cmake
 cubecart
 culeadora.txt
@@ -4508,8 +4514,8 @@ dpadmin.%EXT%
 dra.php
 drp-exports
 drp-publish
-druid/login.html
 druid/indexer/v1/sampler
+druid/login.html
 druid/websession.html
 drupal
 Drupal
@@ -4558,6 +4564,7 @@ e107_admin
 e2ePortalProject/Login.portal
 eadmin
 eagle.epf
+eam/vib
 ebayadmin
 ecadmin
 ecartadmin
@@ -4891,6 +4898,7 @@ FileTransfer
 fileupload
 fileupload/
 filezilla.xml
+filter
 findbugs/
 firebase-debug.log
 FireFox_Reco
@@ -5085,6 +5093,7 @@ gulpfile.js
 gwadmin
 gwt-unitCache/
 h
+h2-console
 h2console
 hac
 hac/
@@ -5547,6 +5556,7 @@ jmx-console/HtmlAdaptor?action=inspectMBean&name=jboss.system:type=ServerInfo
 JNLP-INF/APPLICATION.JNLP
 jo.php
 jobadmin
+jobinfo
 jobs
 join
 joinrequests.%EXT%
@@ -5624,6 +5634,8 @@ kube-scheduler.log
 kube/
 kuber/
 kubernetes/
+kylin
+kylin/api/admin/config
 l
 l-admin
 l.%EXT%
@@ -5639,8 +5651,8 @@ language
 languages
 languages.%EXT%
 latest
-latest/meta-data/hostname
 latest/meta-data/
+latest/meta-data/hostname
 latest/user-data
 layouts/
 lbadmin
@@ -6196,6 +6208,8 @@ mifs/user/index.html
 mime
 mimosa-config.coffee
 mimosa-config.js
+minio/
+minio/webrpc
 mirror.cfg
 mirror/
 misc
@@ -6212,6 +6226,7 @@ moadmin.php
 moadmin/
 mobile
 mobile.%EXT%
+mobile_portal/
 mock/
 modcp
 modcp.%EXT%
@@ -6357,6 +6372,8 @@ mysqlmanager
 mysqlmanager/
 mytag_js.js
 n
+nacos/
+nacos/v1/auth/users?pageNo=1&pageSize=9
 nadmin
 naginator/
 nagios
@@ -6374,6 +6391,7 @@ nbproject/private/private.xml
 nbproject/project.properties
 nbproject/project.xml
 ncadmin
+nccloud
 netadmin
 NetAdmin
 netadmin.%EXT%
@@ -6559,7 +6577,8 @@ output
 output-build.txt
 output/
 overview
-owa
+owa/
+owa/auth/x.js
 OWA
 OWA/
 owa/
@@ -6584,6 +6603,7 @@ page
 page.%EXT%
 pagerduty/
 pages
+pages-manifest.json
 pages.%EXT%
 pages/
 pages/admin/
@@ -7453,6 +7473,7 @@ rpc.%EXT%
 rpc/
 rpc_admin
 rpcwithcert/
+rsa/publicKey
 rsconnect/
 rss
 rss.%EXT%
@@ -7555,8 +7576,8 @@ secure
 secure.%EXT%
 secure/
 secure/downloadFile/
-secure_admin
 secure/QueryComponent!Default.jspa
+secure_admin
 secureadmin
 securecleanup
 secured
@@ -7566,6 +7587,7 @@ security.txt
 security.xml
 security/
 Security/login/
+seeyon/
 selenium/
 sem/
 sendgrid.env
@@ -7971,8 +7993,8 @@ sshadmin/
 ssl/
 ssl_admin
 ssodad
-ssoserver
 SSODAD
+ssoserver
 sspadmin
 sswadmin
 st.php
@@ -8119,6 +8141,8 @@ svn/
 sw/swagger-ui.html
 swagger
 swagger-resources
+swagger-resources/configuration/security
+swagger-resources/configuration/ui
 swagger-ui
 swagger-ui.html
 swagger.json
